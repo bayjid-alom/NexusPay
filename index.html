@@ -45,8 +45,8 @@
                     <label class="label font-medium text-neutral">Mobile Number</label>
                     <input id="input-number" 
                            maxlength="11" 
-                           type="tel"
-                           class="input input-bordered rounded-2xl w-full bg-base-200 focus:border-primary"
+                           type="number"
+                           class="input input-bordered rounded-full w-full bg-base-200 focus:border-primary"
                            placeholder="01XXXXXXXXX" 
                            value="01648771835" />
                     
@@ -54,11 +54,11 @@
                     <input id="input-pin" 
                            maxlength="4" 
                            type="password" 
-                           class="input input-bordered rounded-2xl w-full bg-base-200 focus:border-primary"
+                           class="input input-bordered rounded-full w-full bg-base-200 focus:border-primary"
                            placeholder="4 Digit Pin" />
                     
                     <button id="login-btn" 
-                            class="btn btn-primary mt-8 w-full rounded-2xl h-12 text-base font-semibold">
+                            class="btn btn-primary mt-8 w-full rounded-full h-12 text-base font-semibold">
                         Login
                     </button>
                 </fieldset>
@@ -67,20 +67,13 @@
                     <a href="#" class="link link-primary text-sm">Forgot PIN?</a>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <script>
-        document.getElementById('login-btn').addEventListener('click', () => {
-            const number = document.getElementById('input-number').value;
-            const pin = document.getElementById('input-pin').value;
-            
-            if (number.length === 11 && pin.length === 4) {
-                alert("✅ Login Successful! (Demo)");
-            } else {
-                alert("Please check your mobile number and PIN");
-            }
-        });
-    </script>
+
+
+    <script src="script/login.js"></script>
+
 </body>
 </html>
