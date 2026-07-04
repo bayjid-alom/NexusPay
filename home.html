@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexusPay | Login</title>
-    <link rel="shortcut icon" href="https://picsum.photos/id/201/32/32" type="image/x-icon">
+    <title>NexusPay | Home</title>
+    <link rel="shortcut icon" href="./assets/fevicon.avif" type="image/x-icon">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -18,6 +18,9 @@
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- All themes -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
     <style>
         * {
@@ -65,46 +68,53 @@
 
 
     <div class="p-5 space-y-8">
+
+        <h2 class="text-3xl font-bold py-3">
+            Welcome to <span class="text-primary">NexusPay</span>
+        </h2>
+
+        <p class="text-neutral/60 mb-10">
+            Experience fast, secure, and seamless digital financial services. Add money, cash out, transfer funds, earn
+            rewards, and manage your transactions—all in one place.
+        </p>
         <!-- Quick Services -->
-        <div>
-            <h2 class="font-semibold text-lg mb-4 text-neutral">Quick Services</h2>
-            <div class="grid grid-cols-3 gap-3">
-                <button onclick="showCashout()"
-                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
-                    <i class="fa-solid fa-money-bill-wave text-lg"></i>
-                    <span class="text-xs">Cash Out</span>
-                </button>
 
-                <button
-                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
-                    <i class="fa-solid fa-plus text-lg"></i>
-                    <span class="text-xs">Add Money</span>
-                </button>
+        <div class="grid grid-cols-3 gap-3">
+            <button
+                class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
+                <i class="fa-solid fa-money-bill-wave text-lg"></i>
+                <span class="text-xs">Cash Out</span>
+            </button>
 
-                <button
-                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
-                    <i class="fa-solid fa-arrow-right-arrow-left text-lg"></i>
-                    <span class="text-xs">Transfer Money</span>
-                </button>
+            <button
+                class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
+                <i class="fa-solid fa-plus text-lg"></i>
+                <span class="text-xs">Add Money</span>
+            </button>
 
-                <button
-                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
-                    <i class="fa-solid fa-file-invoice text-lg"></i>
-                    <span class="text-xs">Pay Bill</span>
-                </button>
+            <button
+                class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
+                <i class="fa-solid fa-arrow-right-arrow-left text-lg"></i>
+                <span class="text-xs">Transfer Money</span>
+            </button>
 
-                <button
-                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
-                    <i class="fa-solid fa-gift text-lg"></i>
-                    <span class="text-xs">Get Bonus</span>
-                </button>
+            <button
+                class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
+                <i class="fa-solid fa-file-invoice text-lg"></i>
+                <span class="text-xs">Pay Bill</span>
+            </button>
 
-                <button
-                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
-                    <i class="fa-solid fa-list text-lg"></i>
-                    <span class="text-xs">Transactions</span>
-                </button>
-            </div>
+            <button
+                class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
+                <i class="fa-solid fa-gift text-lg"></i>
+                <span class="text-xs">Get Bonus</span>
+            </button>
+
+            <button
+                class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
+                <i class="fa-solid fa-list text-lg"></i>
+                <span class="text-xs">Transactions</span>
+            </button>
         </div>
 
 
@@ -185,14 +195,14 @@
                     <!-- Bank Account Number -->
                     <div>
                         <label class="label font-medium">Bank Account Number</label>
-                        <input maxlength="11" id="account-number" type="text" class="input input-bordered w-full rounded-full"
-                            placeholder="Enter account number">
+                        <input maxlength="11" id="account-number" type="text"
+                            class="input input-bordered w-full rounded-full" placeholder="Enter account number">
                     </div>
 
                     <!-- Amount -->
                     <div>
-                        <label class="label font-medium">Amount to Add (৳)</label>
-                        <input  id="add-amount" type="number" class="input input-bordered w-full rounded-full"
+                        <label class="label font-medium">Amount to Add</label>
+                        <input id="add-amount" type="number" class="input input-bordered w-full rounded-full"
                             placeholder="Enter amount">
                     </div>
 
@@ -200,7 +210,7 @@
                     <div>
                         <label class="label font-medium">4 Digit PIN</label>
                         <input id="add-pin" type="password" maxlength="4"
-                            class="input input-bordered w-full rounded-full" placeholder="••••">
+                            class="input input-bordered w-full rounded-full" placeholder="Enter Pin">
                     </div>
                 </div>
 
@@ -209,7 +219,7 @@
                     Add Money
                 </button>
 
-                
+
             </div>
         </div>
     </section>
