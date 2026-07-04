@@ -8,8 +8,10 @@
     <link rel="shortcut icon" href="https://picsum.photos/id/201/32/32" type="image/x-icon">
 
     <!-- Font Awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- DaisyUI + TailwindCSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -39,7 +41,7 @@
             <!-- Logo -->
             <div class="flex items-center gap-3">
                 <div
-                    class="w-9 h-9 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-2xl">
+                    class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-2xl">
                     N</div>
                 <div class="">
                     <p class="text-2xl font-semibold text-neutral">$ <span id="balance">25500</span></p>
@@ -49,12 +51,20 @@
 
 
             <!-- Logout -->
-            <a class="btn btn-soft p-2 btn-m text-neutral hover:text-red-500" href="index.html"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Logout</a>
+            <a class="btn btn-soft p-2 btn-m text-neutral hover:text-red-500" href="index.html"><i
+                    class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Logout</a>
         </div>
     </header>
 
-    <div class="p-5 space-y-8">
 
+
+
+
+
+
+
+
+    <div class="p-5 space-y-8">
         <!-- Quick Services -->
         <div>
             <h2 class="font-semibold text-lg mb-4 text-neutral">Quick Services</h2>
@@ -97,8 +107,16 @@
             </div>
         </div>
 
+
+
+
+
+
+
+
+
         <!-- Cashout Section -->
-        <div id="cashout-section" class="">
+        <section id="cashout-section" class="hidden">
             <div class="card bg-white shadow border border-base-200 rounded-3xl">
                 <div class="card-body">
                     <h3 class="font-semibold text-xl mb-6">Cash Out</h3>
@@ -136,15 +154,72 @@
                     </button>
                 </div>
             </div>
-        </div>
-
     </div>
+    </section>
+
+
+
+
+
+    <!-- Add Money Section -->
+    <section id="addmoney-section" class=" mx-auto max-w-md px-4">
+        <div class="card bg-white shadow border border-base-200 rounded-3xl">
+            <div class="card-body">
+                <h3 class="font-semibold text-xl mb-6">Add Money</h3>
+
+                <div class="space-y-5">
+                    <!-- Bank Selection -->
+                    <div>
+                        <label class="label font-medium">Select Bank</label>
+                        <select id="bank-select" class="select select-bordered w-full rounded-full">
+                            <option value="">Choose Bank</option>
+                            <option value="DBBL">DBBL (Dutch Bangla Bank)</option>
+                            <option value="IBBL">IBBL (Islami Bank)</option>
+                            <option value="CITY">City Bank</option>
+                            <option value="BRAC">BRAC Bank</option>
+                            <option value="EBL">EBL Bank</option>
+                            <option value="HSBC">HSBC</option>
+                        </select>
+                    </div>
+
+                    <!-- Bank Account Number -->
+                    <div>
+                        <label class="label font-medium">Bank Account Number</label>
+                        <input maxlength="11" id="account-number" type="text" class="input input-bordered w-full rounded-full"
+                            placeholder="Enter account number">
+                    </div>
+
+                    <!-- Amount -->
+                    <div>
+                        <label class="label font-medium">Amount to Add (৳)</label>
+                        <input  id="add-amount" type="number" class="input input-bordered w-full rounded-full"
+                            placeholder="Enter amount">
+                    </div>
+
+                    <!-- PIN -->
+                    <div>
+                        <label class="label font-medium">4 Digit PIN</label>
+                        <input id="add-pin" type="password" maxlength="4"
+                            class="input input-bordered w-full rounded-full" placeholder="••••">
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <button id="addmoney-btn" class="btn btn-primary w-full rounded-full mt-8 text-base font-semibold">
+                    Add Money
+                </button>
+
+                
+            </div>
+        </div>
+    </section>
 
 
 
 
     <script src="script/machine.js"></script>
     <script src="script/cashout.js"></script>
+    <script src="script/addMoney.js"></script>
 </body>
 
 </html>
