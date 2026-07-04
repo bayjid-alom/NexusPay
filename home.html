@@ -30,15 +30,118 @@
 <body class="min-h-screen bg-base-100 max-w-md mx-auto">
 
 
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-300 sticky top-0 z-50">
+        <div class="px-5 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-9 h-9 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-2xl">
+                    N</div>
+                <div class="">
+                    <p class="text-2xl font-semibold text-neutral">$ <span id="balance">25500</span></p>
+                    <p class="text-xs text-neutral/60">Available Balance</p>
+                </div>
+            </div>
 
 
-    <header>
-        <h2 class="text-primary">This is Home Page!</h2>
-       <a class="btn btn-soft" href="index.html">Logout</a>
+            <!-- Logout -->
+            <a class="btn btn-outline p-2 btn-sm text-neutral hover:text-red-500" href="index.html">Logout</a>
+        </div>
     </header>
 
+    <div class="p-5 space-y-8">
+
+        <!-- Quick Services -->
+        <div>
+            <h2 class="font-semibold text-lg mb-4 text-neutral">Quick Services</h2>
+            <div class="grid grid-cols-3 gap-3">
+                <button onclick="showCashout()"
+                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
+                    <i class="fa-solid fa-money-bill-wave text-lg"></i>
+                    <span class="text-xs">Cash Out</span>
+                </button>
+
+                <button
+                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
+                    <i class="fa-solid fa-plus text-lg"></i>
+                    <span class="text-xs">Add Money</span>
+                </button>
+
+                <button
+                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
+                    <i class="fa-solid fa-arrow-right-arrow-left text-lg"></i>
+                    <span class="text-xs">Transfer Money</span>
+                </button>
+
+                <button
+                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
+                    <i class="fa-solid fa-file-invoice text-lg"></i>
+                    <span class="text-xs">Pay Bill</span>
+                </button>
+
+                <button
+                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
+                    <i class="fa-solid fa-gift text-lg"></i>
+                    <span class="text-xs">Get Bonus</span>
+                </button>
+
+                <button
+                    class="btn btn-outline h-14 flex-col gap-1 hover:bg-primary hover:text-white hover:border-primary">
+                    <i class="fa-solid fa-list text-lg"></i>
+                    <span class="text-xs">Transactions</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Cashout Section -->
+        <div id="cashout-section" class="">
+            <div class="card bg-white shadow border border-base-200 rounded-3xl">
+                <div class="card-body">
+                    <h3 class="font-semibold text-xl mb-6">Cash Out</h3>
+
+                    <div class="space-y-5">
+                        <!-- Agent Number -->
+                        <div>
+                            <label class="label font-medium">Agent Number</label>
+                            <input id="agent-number" type="tel" maxlength="11"
+                                class="input input-bordered w-full rounded-full" placeholder="01XXXXXXXXX">
+                        </div>
+
+                        <!-- Amount -->
+                        <div>
+                            <label class="label font-medium">Amount ($)</label>
+                            <input id="cashout-amount" type="number" class="input input-bordered w-full rounded-full"
+                                placeholder="Enter amount">
+                        </div>
+
+                        <!-- PIN -->
+                        <div>
+                            <label class="label font-medium">4 Digit PIN</label>
+                            <input id="cashout-pin" type="password" maxlength="4"
+                                class="input input-bordered w-full rounded-full" placeholder="••••">
+                        </div>
+                    </div>
+
+                    <button id="cashout-withdraw-btn" "
+                        class=" btn btn-primary w-full rounded-full mt-8 text-base font-semibold">
+                        Withdraw Now
+                    </button>
+
+                    <button " class=" btn btn-outline rounded-full w-full mt-3">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
+
+
+    <script src="script/machine.js"></script>
+    <script src="script/cashout.js"></script>
 </body>
 
 </html>
