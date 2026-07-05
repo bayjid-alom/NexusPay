@@ -80,13 +80,13 @@
         <!-- Quick Services -->
 
         <div class="grid grid-cols-3 gap-3">
-            <button
+            <button onclick="showOnly('cashout-section')"
                 class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
                 <i class="fa-solid fa-money-bill-wave text-lg"></i>
                 <span class="text-xs">Cash Out</span>
             </button>
 
-            <button
+            <button onclick="showOnly('addmoney-section')"
                 class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
                 <i class="fa-solid fa-plus text-lg"></i>
                 <span class="text-xs">Add Money</span>
@@ -172,7 +172,7 @@
 
 
     <!-- Add Money Section -->
-    <section id="addmoney-section" class=" mx-auto max-w-md px-4">
+    <section id="addmoney-section" class=" mx-auto max-w-md px-4 hidden">
         <div class="card bg-white shadow border border-base-200 rounded-3xl">
             <div class="card-body">
                 <h3 class="font-semibold text-xl mb-6">Add Money</h3>
