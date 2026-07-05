@@ -92,7 +92,7 @@
                 <span class="text-xs">Add Money</span>
             </button>
 
-            <button
+            <button onclick="showOnly('transfer-section')"
                 class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
                 <i class="fa-solid fa-arrow-right-arrow-left text-lg"></i>
                 <span class="text-xs">Transfer Money</span>
@@ -159,9 +159,7 @@
                         Withdraw Now
                     </button>
 
-                    <button " class=" btn btn-outline rounded-full w-full mt-3">
-                        Cancel
-                    </button>
+                    
                 </div>
             </div>
     </div>
@@ -229,6 +227,56 @@
 
 
 
+
+
+
+    <!-- Transfer Money Section -->
+    <section id="transfer-section" class=" mx-auto max-w-md px-4 hidden">
+        <div class="card bg-white max-w-md shadow border border-base-200 rounded-3xl">
+            <div class="card-body">
+                <h3 class="font-semibold text-xl mb-6">Transfer Money</h3>
+
+                <div class="space-y-5">
+                    <!-- User Account Number -->
+                    <div>
+                        <label class="label font-medium">Recipient Account Number</label>
+                        <input id="transfer-account" type="text" maxlength="11"
+                            class="input input-bordered w-full rounded-full" placeholder="Account Number">
+                    </div>
+
+                    <!-- Amount -->
+                    <div>
+                        <label class="label font-medium">Amount ($)</label>
+                        <input id="transfer-amount" type="number" class="input input-bordered w-full rounded-full"
+                            placeholder="Enter amount">
+                    </div>
+
+                    <!-- PIN -->
+                    <div>
+                        <label class="label font-medium">4 Digit PIN</label>
+                        <input id="transfer-pin" type="password" maxlength="4"
+                            class="input input-bordered w-full rounded-full" placeholder="Enter Pin">
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <button id="transfer-send-btn" class="btn btn-primary w-full rounded-full mt-8 text-base font-semibold">
+                    Send Now
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
     <!-- Transaction -->
     <section id="history-container" class="w-11/12 mx-auto max-w-md py-3 space-y-5 hidden">
         <div>
@@ -249,6 +297,7 @@
     <script src="script/machine.js"></script>
     <script src="script/cashout.js"></script>
     <script src="script/addMoney.js"></script>
+    <script src="script/transfer.js"></script>
 </body>
 
 </html>
