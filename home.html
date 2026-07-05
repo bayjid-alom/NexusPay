@@ -159,7 +159,7 @@
                         Withdraw Now
                     </button>
 
-                    
+
                 </div>
             </div>
     </div>
@@ -274,25 +274,90 @@
 
 
 
+
     <!-- Transaction -->
-    <section id="history-container" class="w-11/12 mx-auto max-w-md py-3 space-y-5 hidden">
-        <div>
-            <h3 class="font-semibold text-xl mb-6">Transaction History</h3>
+    <section id="history-container" class="w-11/12 mx-auto max-w-md py-5 space-y-5 hidden">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between bg-white border border-base-200 rounded-2xl px-5 py-4 shadow-sm">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <i class="fa-solid fa-clock-rotate-left text-primary text-lg"></i>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-neutral">
+                        Transaction History
+                    </h2>
+                    <p class="text-sm text-neutral/60">
+                        Your recent financial activities
+                    </p>
+                </div>
+            </div>
+
+            <!-- Optional -->
+            <span class="badge badge-primary badge-outline">
+                Recent
+            </span>
         </div>
 
-        <!-- <div
-            class="history-card bg-base-100 text-neutral/80 text-sm leading-6 rounded-md border border-gray-200 p-4 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md">
-           
-        </div> -->
-
-
+        <!-- transaction card will show here dynamically -->
     </section>
 
 
 
 
 
-    
+
+
+    <!-- Default Section -->
+    <section id="default-section" class="w-11/12 mx-auto mt-2 max-w-md ">
+        <div class="card bg-white shadow border border-base-200 rounded-3xl">
+            <div class="card-body">
+
+                <h2 class="text-2xl font-bold">
+                    <span class="text-primary">NexusPay</span>
+                </h2>
+
+                <p class="text-neutral/60 leading-7">
+                    Manage your money securely and effortlessly. Choose any service
+                    above to add money, cash out, transfer funds, pay bills, claim
+                    bonuses, or view your transaction history.
+                </p>
+
+                <div class="divider my-2"></div>
+
+                <div class="space-y-3 text-sm text-neutral/70">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-success"></i>
+                        <span>Fast & Secure Transactions</span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-wallet text-primary"></i>
+                        <span>Easy Balance Management</span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-clock-rotate-left text-warning"></i>
+                        <span>Track Every Transaction</span>
+                    </div>
+                </div>
+
+                <div class="alert alert-info mt-6 rounded-2xl">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Select any service from the buttons above to get started.</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
 
 
 
