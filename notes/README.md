@@ -1,30 +1,4 @@
-document.getElementById("get-bonus-btn").addEventListener("click", function () {
 
-    const coupon = getValueFromInput("bonus-coupon-input");
-
-
-    const balance = getBalance("balance");
-    const bonusAmount = parseInt(200);
-    const newBalance = balance + Number(bonusAmount);
-
-
-    if (coupon == "BAYJID18") {
-        alert(`Bonus reward of $${bonusAmount} has been credited to your account using coupon "${coupon}" at ${new Date().toLocaleString()}.`);
-        setBalance(newBalance)
-
-
-
-        // ❗ Transaction
-        // step-1. find the container
-        const historyContainer = document.getElementById("history-container")
-
-        // step-2. create an element
-        const divElement = document.createElement("div")
-
-        // step-3. write innerHTML
-
-        divElement.innerHTML = `
-        
 <div
     class="history-card relative overflow-hidden rounded-xl border border-emerald-400/25 bg-gradient-to-br from-white via-emerald-50/40 to-green-100/30 p-5 shadow-[0_8px_30px_rgba(16,185,129,.12)] transition-all duration-500 hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-[0_12px_40px_rgba(16,185,129,.25)]">
 
@@ -49,30 +23,30 @@ document.getElementById("get-bonus-btn").addEventListener("click", function () {
 
         <div
             class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-green-600 text-white shadow-lg shadow-emerald-400/30">
-            <i class="fa-solid fa-money-bill-transfer text-lg"></i>
+            <i class="fa-solid fa-gift text-lg"></i>
         </div>
 
         <div class="flex-1 text-[16px] leading-7 text-neutral/80">
-            
-        Bonus reward of $${bonusAmount} has been credited to your account using coupon "${coupon}" at ${new Date().toLocaleString()}.
+            Bonus reward of $${bonusAmount} has been credited to your account using coupon "${coupon}" at ${new Date().toLocaleString()}.
         </div>
 
     </div>
 
 </div>
-        `
-
-        // step-4. append the child to the parent
-        historyContainer.appendChild(divElement)
 
 
 
-    }
-    else {
-        alert(`Invalid coupon code "${coupon}". Please enter a valid bonus coupon and try again.`);
-        return;
-    }
 
 
-})
+
+
+
+
+
+
+
+
+
+
+
 
