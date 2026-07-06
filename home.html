@@ -311,7 +311,7 @@
 
 
     <!-- Default Section -->
-    <section id="default-section" class=" mx-auto mt-2  max-w-[96%]">
+    <section id="default-section" class=" mx-auto mt-2  max-w-[96%] hidden">
         <div class="card bg-white shadow border-t border-l border-r border-base-300 rounded-t-2xl">
             <div class="card-body">
 
@@ -356,6 +356,40 @@
 
 
 
+    <!-- Get Bonus Section -->
+    <section id="getbonus-section" class=" mx-auto max-w-md px-5">
+        <div class="card bg-white shadow border border-base-200 rounded-3xl">
+            <div class="card-body">
+                <h3 class="font-semibold text-xl mb-6">Get Bonus</h3>
+
+                <div class="space-y-5">
+                    <!-- Coupon Input -->
+                    <div>
+                        <label class="label font-medium mb-2">Enter Bonus Coupon</label>
+                        <input id="bonus-coupon-input" type="text" maxlength="20"
+                            class="input input-bordered w-full rounded-full text-center uppercase"
+                            placeholder="ENTER COUPON CODE">
+                    </div>
+
+                    <!-- Hint -->
+                    <div class="text-center text-xs text-neutral/60">
+                        Example: <span class="font-semibold text-primary">BAYJID18</span> for $200 Bonus
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <button id="get-bonus-btn" class="btn btn-primary w-full rounded-full mt-8 text-base font-semibold">
+                    Get Bonus
+                </button>
+
+        
+            </div>
+        </div>
+    </section>
+
+
+
+
 
 
 
@@ -366,6 +400,7 @@
     <script src="script/cashout.js"></script>
     <script src="script/addMoney.js"></script>
     <script src="script/transfer.js"></script>
+    <script src="script/getBonus.js"></script>
 </body>
 
 </html>
