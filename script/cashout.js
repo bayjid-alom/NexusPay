@@ -38,7 +38,7 @@ document.getElementById("cashout-withdraw-btn").addEventListener("click", functi
         // step-3. write innerHTML
         divElement.innerHTML = `
          <div
-            class="history-card bg-base-100 text-neutral/80 text-sm leading-6 rounded-md border border-gray-200 p-4 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md">
+            class="history-card bg-base-100 text-neutral/80 text-[16px] leading-6 rounded-md border border-gray-200 p-4 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md">
 
             Cash Out Successful! $${cashoutAmount} has been withdrawn from your account to ${number} at ${new Date().toLocaleString()}.
         </div>

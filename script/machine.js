@@ -28,12 +28,14 @@ function showOnly(id) {
     const history = document.getElementById("history-container")
     const transfer = document.getElementById("transfer-section")
     const defaultSection = document.getElementById("default-section")
+    const getbonus = document.getElementById("getbonus-section")
 
     cashout.classList.add("hidden");
     addmoney.classList.add("hidden")
     history.classList.add("hidden")
     transfer.classList.add("hidden")
     defaultSection.classList.add("hidden")
+    getbonus.classList.add("hidden")
 
     const selected = document.getElementById(id)
     selected.classList.remove("hidden")

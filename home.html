@@ -104,7 +104,7 @@
                 <span class="text-xs">Pay Bill</span>
             </button>
 
-            <button
+            <button onclick="showOnly('getbonus-section')"
                 class="btn h-[70px] flex-col gap-1 bg-[#F8FAFC] text-primary border-[#E2E8F0] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1">
                 <i class="fa-solid fa-gift text-lg"></i>
                 <span class="text-xs">Get Bonus</span>
@@ -311,7 +311,7 @@
 
 
     <!-- Default Section -->
-    <section id="default-section" class=" mx-auto mt-2  max-w-[96%] hidden">
+    <section id="default-section" class=" mx-auto mt-2  max-w-[96%] ">
         <div class="card bg-white shadow border-t border-l border-r border-base-300 rounded-t-2xl">
             <div class="card-body">
 
@@ -319,7 +319,7 @@
                     <span class="text-primary">NexusPay</span>
                 </h2>
 
-                <p class="text-neutral/60 leading-7">
+                <p class="text-neutral/60 leading-7 text-[16px]">
                     Manage your money securely and effortlessly. Choose any service
                     above to add money, cash out, transfer funds, pay bills, claim
                     bonuses, or view your transaction history.
@@ -357,7 +357,7 @@
 
 
     <!-- Get Bonus Section -->
-    <section id="getbonus-section" class=" mx-auto max-w-md px-5">
+    <section id="getbonus-section" class=" mx-auto max-w-md px-5 hidden">
         <div class="card bg-white shadow border border-base-200 rounded-3xl">
             <div class="card-body">
                 <h3 class="font-semibold text-xl mb-6">Get Bonus</h3>
@@ -382,15 +382,10 @@
                     Get Bonus
                 </button>
 
-        
+
             </div>
         </div>
     </section>
-
-
-
-
-
 
 
 
